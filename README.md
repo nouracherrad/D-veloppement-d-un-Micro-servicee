@@ -1,5 +1,5 @@
-﻿# D-veloppement-d-un-Micro-servicee
- # Microservice de Gestion de Comptes Bancaires
+
+ # D-veloppement-d-un-Micro-servicee
 
 Ce projet est un microservice Spring Boot permettant de gérer des comptes bancaires. Il implémente plusieurs approches d'API (REST, GraphQL) et utilise différentes technologies Spring.
 
@@ -249,4 +249,5 @@ http://localhost:8080/swagger-ui.html
 Le fichier `application.properties` contient la configuration de la base H2 et des paramètres GraphQL.
 
 Ce microservice démontre l'implémentation de différentes approches d'API dans un contexte Spring Boot, offrant flexibilité et adaptabilité selon les besoins clients.
+
 
