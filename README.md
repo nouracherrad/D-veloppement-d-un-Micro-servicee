@@ -3,7 +3,7 @@
 
 Ce projet est un microservice Spring Boot permettant de gérer des comptes bancaires. Il implémente plusieurs approches d'API (REST, GraphQL) et utilise différentes technologies Spring.
 
-## 📋 Table des Matières
+##  Table des Matières
 
 1. [Architecture du Projet](#architecture)
 2. [Technologies Utilisées](#technologies)
@@ -13,7 +13,7 @@ Ce projet est un microservice Spring Boot permettant de gérer des comptes banca
 6. [Tests](#tests)
 7. [GraphQL](#graphql)
 
-## 🏗️ Architecture du Projet <a name="architecture"></a>
+##  Architecture du Projet <a name="architecture"></a>
 
 Le projet suit une architecture en couches classique :
 - **DTO** : Objets de transfert de données
@@ -23,7 +23,7 @@ Le projet suit une architecture en couches classique :
 - **Web** : Contrôleurs REST et GraphQL
 - **Mappers** : Conversion entre entités et DTOs
 
-## 🛠️ Technologies Utilisées <a name="technologies"></a>
+##  Technologies Utilisées <a name="technologies"></a>
 
 - **Spring Boot 3.x**
 - **Spring Data JPA** - Persistance des données
@@ -34,7 +34,7 @@ Le projet suit une architecture en couches classique :
 - **GraphQL** - API GraphQL
 - **Swagger/OpenAPI** - Documentation des APIs
 
-## 📁 Structure du Projet <a name="structure"></a>
+##  Structure du Projet <a name="structure"></a>
 
 ```
 org.sdia.bankaccountservice
@@ -63,7 +63,7 @@ org.sdia.bankaccountservice
     └── BankAccountServiceApplication
 ```
 
-## 💻 Implémentation <a name="implementation"></a>
+##  Implémentation 
 
 ### 1. Création du Projet Spring Boot
 
@@ -126,7 +126,7 @@ public interface BankAccountRepository extends JpaRepository<BankAccount, String
 **AccountRestController** : API REST traditionnelle
 **BankAccountGraphqlController** : API GraphQL
 
-## 🌐 API Endpoints <a name="api"></a>
+##  API Endpoints <a name="api"></a>
 
 ### API REST
 
@@ -141,8 +141,11 @@ public interface BankAccountRepository extends JpaRepository<BankAccount, String
 - `GET /bankAccounts` - Liste paginée des comptes
 - `GET /bankAccounts/{id}` - Détail d'un compte
 - `POST /bankAccounts` - Création via Spring Data REST
+- 
+###### voila un extrait de b ase de donnes sur H2
+<img width="1117" height="833" alt="image" src="https://github.com/user-attachments/assets/c48223b1-1bd4-4742-9b05-f9a8dc23e70f" />
 
-## 🧪 Tests <a name="tests"></a>
+##  Tests <a name="tests"></a>
 
 ### Test de la Couche DAO
 
@@ -167,7 +170,7 @@ Collections Postman disponibles pour tester :
 - Modification
 - Suppression
 
-## 🎯 GraphQL <a name="graphql"></a>
+##  GraphQL <a name="graphql"></a>
 
 ### Schéma GraphQL (`schema.graphqls`)
 
@@ -195,6 +198,9 @@ type Mutation {
     createAccount(account: BankAccountInput!): BankAccount
 }
 ```
+<img width="1716" height="617" alt="image" src="https://github.com/user-attachments/assets/d2bc0a45-8a02-4778-889e-4d4e34d5e7de" />
+<img width="1696" height="658" alt="image" src="https://github.com/user-attachments/assets/2b92e699-b6fd-4aed-b7b0-764b3ad0c28b" />
+
 
 ### Requêtes GraphQL Exemple
 
@@ -226,14 +232,16 @@ mutation {
 }
 ```
 
-## 📚 Documentation Swagger
+##  Documentation Swagger
 
 La documentation Swagger est accessible à :
 ```
 http://localhost:8080/swagger-ui.html
 ```
+### voila un extrait de test sur swagger 
+<img width="1790" height="933" alt="image" src="https://github.com/user-attachments/assets/74b86dd7-1b6a-453d-825b-a179c542a439" />
 
-## 🚀 Démarrage
+##  Démarrage
 
 1. Cloner le projet
 2. Importer dans l'IDE
@@ -242,12 +250,12 @@ http://localhost:8080/swagger-ui.html
    - Application : http://localhost:8080
    - H2 Console : http://localhost:8080/h2-console
    - Swagger : http://localhost:8080/swagger-ui.html
-   - GraphQL : http://localhost:8080/graphql
+   - GraphQL : http://localhost:8080/graphiql
 
-## 🔧 Configuration
+## Configuration
 
 Le fichier `application.properties` contient la configuration de la base H2 et des paramètres GraphQL.
 
-Ce microservice démontre l'implémentation de différentes approches d'API dans un contexte Spring Boot, offrant flexibilité et adaptabilité selon les besoins clients.
+
 
 
