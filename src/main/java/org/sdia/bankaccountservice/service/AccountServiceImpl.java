@@ -32,4 +32,17 @@ BankAccount savedBankAccount = bankAccountRepository.save(bankAccount);
 BankAccountResponseDTO bankAccountResponseDTO = accountMapper.fromBankAccount(savedBankAccount);
         return bankAccountResponseDTO;
     }
+    @Override
+    public BankAccountResponseDTO updateAccount(String id, BankAccountRequestDTO bankAccountDTO) {
+        BankAccount bankAccount =BankAccount.builder()
+                .id(id)
+                .createdAt(new Date())
+                .balance(bankAccountDTO.getBalance())
+                .currency(bankAccountDTO.getCurrency())
+                .type(bankAccountDTO.getType())
+                .build();
+        BankAccount savedBankAccount = bankAccountRepository.save(bankAccount);
+        BankAccountResponseDTO bankAccountResponseDTO = accountMapper.fromBankAccount(savedBankAccount);
+        return bankAccountResponseDTO;
+    }
 }
